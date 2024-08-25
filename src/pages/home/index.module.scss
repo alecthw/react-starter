@@ -1,0 +1,29 @@
+.content {
+  width: 33.3%;
+  margin: 0 auto;
+
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+  }
+
+  .logo:hover {
+    filter: drop-shadow(0 0 2em blue);
+  }
+
+  .manual {
+    padding: 2em;
+  }
+
+  .readDocs {
+    color: #888;
+  }
+
+  .navCard {
+    margin-top: 4rem;
+
+    .nameInput {
+      width: 15rem;
+    }
+  }
+}

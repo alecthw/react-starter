@@ -1,0 +1,19 @@
+.pageLayout {
+  width: 100%;
+  text-align: center;
+
+  .navItemActive {
+    font-weight: bolder;
+  }
+
+  .viewport {
+    padding: 2em;
+
+    .suspense {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+}
