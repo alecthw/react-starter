@@ -12,6 +12,7 @@ const Counter = lazy(
 const Member = lazy(() => import(/* webpackChunkName: "member" */ './member'));
 
 const Three = lazy(() => import(/* webpackChunkName: "three" */ './three'));
+const Pixi = lazy(() => import(/* webpackChunkName: "pixi" */ './pixi'));
 
 const routes: RouteObject[] = [
   {
@@ -44,7 +45,14 @@ const routes: RouteObject[] = [
     path: '/three',
     element: <Three />,
   },
-  { path: '*', element: <NoMatch /> },
+  {
+    path: '/pixi',
+    element: <Pixi />,
+  },
+  {
+    path: '*',
+    element: <NoMatch />,
+  },
 ];
 
 const RouteIndex: FC = () => {

@@ -1,7 +1,7 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useState } from 'react';
-import type { Mesh } from 'three';
+import { type Mesh } from 'three';
 
 function Box(props: { position: [number, number, number] }) {
   // This reference gives us direct access to the THREE.Mesh object
@@ -45,6 +45,7 @@ const Three = () => {
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
       <OrbitControls />
+      <axesHelper args={[10]} />
     </Canvas>
   );
 };
