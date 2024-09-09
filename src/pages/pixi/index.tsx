@@ -2,6 +2,8 @@ import { Container, PixiComponent, Sprite, Stage, Text } from '@pixi/react';
 import { BlurFilter, Graphics } from 'pixi.js';
 import { useMemo } from 'react';
 
+import BunnyPng from './assets/bunny.png';
+
 interface RectangleProps {
   x: number;
   y: number;
@@ -31,12 +33,7 @@ const Pixi = () => {
       height={600}
       options={{ background: 0xeef1f5 }}
     >
-      <Sprite
-        image="https://pixijs.io/pixi-react/img/bunny.png"
-        x={400}
-        y={270}
-        anchor={{ x: 0.5, y: 0.5 }}
-      />
+      <Sprite image={BunnyPng} x={400} y={270} anchor={{ x: 0.5, y: 0.5 }} />
 
       <Container x={400} y={330}>
         <Text

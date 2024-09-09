@@ -1,18 +1,19 @@
 import { FC, lazy } from 'react';
+import { Navigate, RouteObject, useRoutes } from 'react-router-dom';
 
 import Layout from '@/layouts';
-import { Navigate, RouteObject, useRoutes } from 'react-router-dom';
+
+import ECharts from './echarts';
 import Home from './home';
 import NoMatch from './NoMatch';
+import Pixi from './pixi';
+import Three from './three';
 
 const Counter = lazy(
   () => import(/* webpackChunkName: "counter" */ './counter'),
 );
 
 const Member = lazy(() => import(/* webpackChunkName: "member" */ './member'));
-
-const Three = lazy(() => import(/* webpackChunkName: "three" */ './three'));
-const Pixi = lazy(() => import(/* webpackChunkName: "pixi" */ './pixi'));
 
 const routes: RouteObject[] = [
   {
@@ -40,6 +41,10 @@ const routes: RouteObject[] = [
         element: <Member />,
       },
     ],
+  },
+  {
+    path: '/echarts',
+    element: <ECharts />,
   },
   {
     path: '/three',

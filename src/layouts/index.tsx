@@ -19,6 +19,18 @@ const PageLayout = () => (
       </Link>
     </Space>
 
+    <Space split={<Divider type="vertical" />}>
+      <Link to="/echarts" className="text-base font-bold">
+        ECharts
+      </Link>
+      <Link to="/three" className="text-base font-bold">
+        three.js
+      </Link>
+      <Link to="/pixi" className="text-base font-bold">
+        pixi.js
+      </Link>
+    </Space>
+
     <div className="p-8">
       <Suspense
         fallback={
