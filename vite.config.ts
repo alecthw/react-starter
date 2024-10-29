@@ -20,6 +20,22 @@ export default defineConfig(({ command }) => ({
           drop: ['console', 'debugger'],
         },
 
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react-core': ['react', 'react-dom'],
+          'vendor-react-redux': [
+            '@reduxjs/toolkit',
+            'react-redux',
+            'redux-first-history',
+          ],
+          'vendor-lib': ['dayjs', 'rodash', 'web-vitals'],
+        },
+      },
+    },
+  },
+
   server: {
     proxy: {
       '^/api': { target: 'http://example.com' },
